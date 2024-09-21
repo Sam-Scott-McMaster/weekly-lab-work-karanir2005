@@ -1,0 +1,13 @@
+Questions - Lab 1.1
+
+Question 1:
+What are the top 3 things you’ve learned? 
+What are you excited to learn more about? 
+What are you worried about in the course?
+
+Answer:
+I am completely new to linux, therefore all the things done in this lab were new to me. However, I found some things    intresting. Firstly, how you can use multiple comands to achieve the same thing (for example using the insert mode on   VIM to edit the document but an easier way to edit the document using the keystrokes in command mode). I wonder why the developers of linux gave users multiple ways of achieving the same thing - perhaps it was for the purpose of providing  users with shortcuts. Using these keystrokes are tricky for me right now, but im hoping that in the future I will get   the hang of it and will be able to make the best out of these shortcuts.
+Secondly, I found it facinating how we can write code in VIM and execute it later by just calling the file - similar to python files we used in the 1P13 course. This is one feature that I find myself using a lot in the future and I look    forward to it!
+The third thing I found faciniting was how we can control the permissions of files. I still find it facinating that we  have access over the file permissions, and has allowed me to understnd more about how data in apps, databases, websites etc. are kept private.
+I am excited to learn more about the C language and how it would help me understand more about the basics of programing and help me in my programing language.
+One thing I am worried about in this course are the labs - sometimes I find it hard to follow along in a fast paced lab and I wish to improve on this. For example coming more prepared to labs and reading the documents beforehand.
