@@ -1,7 +1,9 @@
 #!/bin/bash
 
 #Question 2 Lab 1.1
-
+#Rushil Karani
+#Sep 21 2024
+#Clears all the .tmp files in a specifed directory.
 
 current_dir=$(pwd) #variable to store current directory
 
