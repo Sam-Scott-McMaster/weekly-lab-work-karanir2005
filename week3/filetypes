@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ $# = 0 ]
+then
+	echo "Error!! Usage: ./filetypes *followed by file/directory names seperated by spaces*" >&2
+	exit 1
+fi
+for name in "$@"
+do
+	if [ -d "$name" ]
+	then
+		echo "directory: $name"
+		exit 0
+	elif [ -f "$name" ]
+	then
+		echo "file: $name"
+		exit 0
+	else
+		echo "unknown: $name"
+		exit 1
+	fi
+done

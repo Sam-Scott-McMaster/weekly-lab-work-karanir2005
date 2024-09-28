@@ -1,0 +1,15 @@
+My Predection: 
+
+A,B,C,D are variables
+A=a
+B=1
+C="$A${B}C" = "a1C"
+D=$B*10 = "1*10"
+
+echo "$A $B $C $D"
+
+Expected Output:  a 1 a1C 1*10
+
+Actual Output: a 1 a1C 1*10
+
+My prediction was right: The variable A stores string value a, B stored string 1, c stored A+B+"C", therefore a1C and d stores "1"+"*10" = "1*10" and the output is: A B C D  - all variables seperated by a space.

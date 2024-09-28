@@ -1,0 +1,2 @@
+#!/bin/bash
+./ex3.2.2 "ls -l"     #runs the ls -l command through the ex3.2.2 file
