@@ -1,0 +1,6 @@
+1) cat english/* | ./splt | sort | uniq
+2) cat english/* | ./splt | sort | uniq | wc -w
+3) cat english/* | ./splt | sort | uniq | tee lexicon.txt  | wc -w
+4) cat english/* | ./splt | sort | uniq | head -n 1
+5) cat english/* | ./splt | sort | uniq | tail -n 1
+6) cat english/* | ./splt | sort | uniq | sed -n '9998p'

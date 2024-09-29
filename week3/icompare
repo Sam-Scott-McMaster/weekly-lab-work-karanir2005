@@ -1,5 +1,9 @@
 #!/bin/bash
-if [[ $1 -eq $2 || $# != 2 ]]
+
+#prints the smaller of 2 integers passed as arguments
+
+if [[ $1 -eq $2 || $# != 2 ]] # checks is the number of arguments dosen't equal 2 
+                              # or checks if the arguments are equal value: then returns error
 then
 	echo "Error! Please enter 2 different integers." >&2
 	exit 1
