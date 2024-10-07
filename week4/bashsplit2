@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#takes an input from text/file and prints each word line by line
+
+if [ $# != 0 ] #returns error/exit code 1 if there is an argument present
+then
+	echo "Usage: ./bashsplit" >&2
+	exit 1
+fi
+
+while read line   #loops through each word in the list and outputs the words one line at a time
+do
+	for word in $line
+	do
+		if [[ "$word" =~ ^[a-zA-Z]+$ ]]; then
+            echo "$word"
+        fi
+	done
+done
+

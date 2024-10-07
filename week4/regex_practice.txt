@@ -1,0 +1,113 @@
+Part 1
+1. REGEX
+Match:
+- REGEX
+- REGEX xxx 
+- Reg REGEX ex.
+
+Non-match:
+- reGEX123
+- regex
+- 123regex
+
+2. ^re*ge+x
+Match:
+- regex
+- reeeeegex
+- rgex
+
+Non-match:
+- reggex
+- rrex
+- egex
+
+3. [^regex]
+Match:
+- A
+- B
+- C
+   
+Non-match:
+- r
+- e
+- x
+
+4. (reg){0,2}ex
+Match:
+- ex
+- regex
+- regregex
+
+Non-match:
+- regregregex
+- gex
+- regexex
+
+5. re?g?e?x
+Match:
+- rex
+- rgx
+- rgex
+
+Non-match:
+- rxeegex
+- ree
+- rrx
+
+6. ^(reg|REG)(ex)\2\1$
+Match:
+- regexexreg
+- REGexexREG
+- n/a
+
+Non-match:
+- regexexREG
+- regrex
+- regexregex
+
+
+
+Part 2:
+
+1. a(ab)*a
+aaba
+aabababa
+
+2. ab+c 
+abc
+
+3. a.[bc]+
+abc
+abbbbbbbb
+azc
+abcbcbcbc
+asccbbbbcbcccc
+
+4. abc|xyz
+abc
+xyz
+
+5. [a-z]+[\.\?!]
+swamping.
+undulate?
+
+6. [a-zA-Z]*[^,]=
+Putt=
+BotHEr
+=
+Brittle =
+Other.=
+
+7. [a-z][\.\?!]\s+[A-Z]
+g. H
+i? J
+
+8. <[^>]+>
+<an xml tag>
+<opentag>
+<closetag>
+</closetag>
+<with attribute=”77”>
+
+9. (very )+(important )?(tall|well-dressed) person
+very very well-dressed person

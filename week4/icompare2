@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#prints the smaller of 2 integers passed as arguments
+
+regex='^[+-]?(0|[1-9][0-9]{0,8})$'
+
+if [[ $# != 2 ]] # checks if the number of arguments doesn't equal 2
+then
+	echo "Error! Please enter 2 different integers." >&2
+	exit 1
+fi
+
+if ! [[ $1 =~ $regex && $2 =~ $regex ]]; then
+    echo "Usage: Enter 1 to 9 digits, with optional + or - sign, no leading zeros." >&2
+    exit 2
+fi
+
+if [[ $1 -eq $2 ]];
+then
+	echo "Error! Please enter 2 different integers." >&2
+	exit 1
+elif [[ $1 -lt $2 ]];
+then
+	echo "$1 is smaller than $2"
+	exit 0
+else
+	echo "$2 is smaller than $1"
+	exit 0
+fi
+
