@@ -1,0 +1,7 @@
+My experience with C has been a fun one, especially compared to Java and Python, its a simple language, similar to java; which is why i found it easy to learn as well. 
+
+One significant advantage of C is its low-level memory management capabilities. As a person who also is keen about computer hardware and electronics, I find this language useful to know
+
+However, C comes with dangers, such as buffer overflows and memory leaks. Sometimes I also find it annoying and unnecessarily frustrating to deal with strings in C, which is why i prefer python or java over C.
+
+While I appreciate C’s efficiency and control, I prefer using Java and Python for most projects. Their high-level capabilities allow me to focus on complex applications, making development faster and more enjoyable.
