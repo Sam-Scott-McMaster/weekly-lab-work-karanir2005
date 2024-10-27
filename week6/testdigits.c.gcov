@@ -1,0 +1,56 @@
+        -:    0:Source:testdigits.c
+        -:    0:Graph:testdigits-testdigits.gcno
+        -:    0:Data:testdigits-testdigits.gcda
+        -:    0:Runs:2
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include "digits.h"
+        -:    4:
+        2:    5:int main() {
+        -:    6:    int min, max, sum;
+        -:    7:    long n;
+        -:    8:
+        2:    9:    n = 1234;
+        2:   10:    sum = digits(n, &max, &min);
+        2:   11:    printf("%ld: sum %d, min %d, max %d\n", n, sum, min, max);
+        2:   12:    if (max == 4 && min == 1 && sum == 10) {
+        2:   13:        puts("success");
+        -:   14:    } else {
+    #####:   15:        puts("failure");
+    #####:   16:        return EXIT_FAILURE;
+        -:   17:    }
+        -:   18:
+        2:   19:    n = 123456789;
+        2:   20:    sum = digits(n, &max, &min);
+        2:   21:    printf("%ld: sum %d, min %d, max %d\n", n, sum, min, max);
+        2:   22:    if (max == 9 && min == 1 && sum == 45) {
+        2:   23:        puts("success");
+        -:   24:    } else {
+    #####:   25:        puts("failure");
+    #####:   26:        return EXIT_FAILURE;
+        -:   27:    }
+        -:   28:
+        2:   29:    n = -1234;
+        2:   30:    sum = digits(n, &max, &min);
+        2:   31:    printf("%ld: sum %d, min %d, max %d\n", n, sum, min, max);
+        2:   32:    if (max == 4 && min == 1 && sum == 10) {
+        2:   33:        puts("success");
+        -:   34:    } else {
+    #####:   35:        puts("failure");
+    #####:   36:        return EXIT_FAILURE;
+        -:   37:    }
+        -:   38:
+        2:   39:    n = 134;
+        2:   40:    sum = digits(n, &max, &min);
+        2:   41:    printf("%ld: sum %d, min %d, max %d\n", n, sum, min, max);
+        2:   42:    if (max == 4 && min == 1 && sum == 10) {
+    #####:   43:        puts("success");
+        -:   44:    } else {
+        2:   45:        puts("failure");
+        2:   46:        return EXIT_FAILURE;
+        -:   47:    }
+        -:   48:
+        -:   49:    
+        -:   50:
+    #####:   51:    return EXIT_SUCCESS;
+        -:   52:}

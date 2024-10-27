@@ -1,0 +1,32 @@
+        -:    0:Source:digits.h
+        -:    0:Graph:testdigits-testdigits.gcno
+        -:    0:Data:testdigits-testdigits.gcda
+        -:    0:Runs:2
+        8:    1:int digits (long n, int *max, int *min) {
+        -:    2:
+        -:    3:    //set max and min to lowest and highest possible number
+        -:    4:    
+       8*:    5:    if (n==0) return 0; //return 0 if n is 0
+        -:    6:
+        8:    7:    *max = 0;
+        8:    8:    *min = 9;
+        8:    9:    int sum=0; //innitialize sum to 0
+        -:   10:    //absolute value of long number (for cases when n is negative
+        -:   11:    //we ignore the negative sign
+        -:   12:    //ie. the sum, max and min will ignore the negative sign.)
+        8:   13:    n=labs(n);     
+        -:   14:
+        -:   15:    //this loop adds all the digits to sum individually and also sets max and min to the max and min of n
+       48:   16:    while (n >  0) {
+       40:   17:        int digit = n % 10;  // store the last digit in int digit
+       40:   18:        sum += digit;        // add the last digit to sum
+        -:   19:
+        -:   20:        // if digit is smaller or bigger than min/max then update
+       40:   21:        if (digit > *max) *max = digit;
+       40:   22:        if (digit < *min) *min = digit;
+        -:   23:
+       40:   24:        n /= 10;  // remove the last digit
+        -:   25:    }
+        -:   26:
+        8:   27:    return sum; //return sum
+        -:   28:}
