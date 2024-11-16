@@ -1,0 +1,25 @@
+a. Based on the quantitative evidence from this investigation (be specific), is it generally a
+good idea to remove function calls from a program? What trade-offs do you see, if any,
+between performance improvements and the quality of the source code?
+
+Removing the function calls reduced the run time by ~0.1 seconds. This is obviously not a huge difference and would not make a difference when compiling. However, in other situations, like large apps and programs with multiple methods, the difference in runtime would add up and be much lesser. Reducing function calls by replacing them with macros/simple Boolean expressions is also much easier/shorter to code. 
+
+
+b. When we’re looking to remove function calls, is it better to use a parameterized macro
+to replace a function call, or is it better to just replace the function call with the
+equivalent code? Explain your answer.
+
+In a case similar to primes.c, it would be easier to replace them with equivalent code since the "function" is called only in one place. However if the function is used in multiple places, then it might be better to use macros. Macros are constant that are usually defined when they are going to be used in multiple places in the code, and I believe the same extends in the case of parameterized macros.
+
+
+c. Did you get a better performance improvement by removing function calls or by
+improving the algorithm? Explain, based on evidence from the gprof reports, why it was
+that one was better than the other?
+
+The results were better when we improved the algorithm. This was because, although removing the function calls made the code run faster. The Boolean comparisons were still performed for all numbers from 2 to factor. However improving the algorithm helped to eliminate a lot of comparisons. The code can be further improved. Since no even numbers after 2 are odd and since all multiples of even numbers are also even, we can initialize factor to 3 and increment factor by 2 each time. 
+
+
+d. Under what circumstances might it still be a good idea to try to remove function calls
+from your code?
+
+It might be a good idea to remove function calls in time-critical apps. Functions still reduce run time. For example primes.4, with the improved algorithm still runs for ~0.03. However if I remove the function calls, the run time is ~0.01 seconds. This difference might be more for larger applications and is also easier to code, since its less typing.
